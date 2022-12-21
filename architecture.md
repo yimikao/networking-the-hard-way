@@ -3,6 +3,7 @@
 ## ISO OSI Protocol
 Abandoned for TCP/IP Model/Protocol instead
 
+```
 Application
     /\
     ||
@@ -28,12 +29,14 @@ Data Link
     ||
     \/
 Physical
+```
 
 
 ## TCP/IP PROTOCOL
 
 These have been immensely successful and have led to The Internet.
 
+```
 Application  ============= OSI 5 - 7
     /\
     ||
@@ -47,6 +50,7 @@ TCP / UDP  ============= OSI 4
     ||
     \/
 H/W interface ============= OSI 1 - 2
+```
 
 # NETWORKING
 
@@ -71,4 +75,17 @@ A gateway is a generic term for an entity used to connect two or more networks.
 The communication between layers in either the OSI or the TCP/IP stacks is done by sending packets of data from one layer to the next, and then eventually across the network. Each layer has administrative information that it has to keep about its own layer. It does this by adding header information to the packet it receives from the layer above, as the packet passes down. On the receiving side, these headers are removed as the packet moves up.
 For example, the TFTP (Trivial File Transfer Protocol) moves files from one computer to another. It uses the UDP protocol on top of the IP protocol, which may be sent over Ethernet. 
 
+
+# Connection Models
+
+In order for two computers to communicate, they must set up a path whereby they can send at least one message in a session. There are two major models for this:
+
+- Connection oriented
+
+A single connection is established for the session. Two-way communications flow along the connection. When the session is over, the connection is broken. The analogy is to a phone conversation. An example is TCP
+
+
+- Connectionless
+
+In a connectionless system, messages are sent independent of each other. Ordinary mail is the analogy. Connectionless messages may arrive out of order. An example is the IP protocol. UDP is a connectionless protocol above IP and is often used as an alternative to TCP, as it is much lighter weight.
 
